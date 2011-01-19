@@ -274,7 +274,7 @@ class  LiteFrame {
 
     public function __construct(){
   		
-    			$this->fileSystemPath = realpath('.') . "/";
+    	  $this->fileSystemPath = realpath('.') . "/";
           date_default_timezone_set('UTC');
   	
     }  // Construction End	
@@ -408,7 +408,10 @@ class  LiteFrame {
 	public  function SetPaths(){ 
 	   
         $this->logFilePath =  $this->fileSystemPath.$this->logFolder; 
-         $this->applicationPath = 'http://' . $_SERVER['SERVER_NAME'] . dirname($_SERVER['SCRIPT_NAME']);
+        $this->applicationPath = 'http://' . $_SERVER['SERVER_NAME'] . dirname($_SERVER['SCRIPT_NAME']);
+        if( substr( $this->applicationPath,strlen($this->applicationPath)-1) != "/" ){
+        	$this->applicationPath .= "/";
+        }
         $this->fileSystemPaths['basePath']     = $this->fileSystemPath;
         $this->fileSystemPaths['actionPath']   = $this->fileSystemPath . $this->actionFolder;
         $this->fileSystemPaths['templatePath'] = $this->fileSystemPath . $this->templateFolder;           
