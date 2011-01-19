@@ -1,0 +1,11 @@
+
+		      <ul class='horizontal nav'>
+			    <!--{foreach from=$SiteData.mainNav item=nav}-->
+				    <li>
+				    	<a onClick="_gaq.push(['_trackEvent', 'General', 'Main Nav', '<!--{$nav.value}-->']);"  <!--{if $nav.active}--> class='active' <!--{/if}--> href='<!--{$nav.url}-->' title='<!--{$nav.title}-->'>
+				    		<span><!--{$nav.value}--></span>
+				    	</a>
+				    </li>
+				<!--{/foreach}-->
+		      </ul>
+	

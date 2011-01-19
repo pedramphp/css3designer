@@ -1,0 +1,259 @@
+/* 
+  :: Css3designer.com Main Stylesheet
+  :: style.css Cascading Style Sheet
+  :: ------------------------------------------------------------------
+  :: Author:  Mexo.co - http://www.mexo.co
+  :: Twitter: @mexo_team
+  :: Email:   admin@mexo.co 
+  :: Version: 1.0 - DEC 2010
+  :: Copyright: 2010 http://Css3designer.com - All rights reserved.
+  :: ------------------------------------------------------------------
+  :: We personally found this type of styling the Most Human Readeable one
+  :: No Doubt 
+
+
+  HACK DIRECTORY
+  ==============	
+  % box model hack
+  $ targets safari
+  & clearfix hack
+  ? targets IE
+  ! temporary
+	
+		
+	em values -    Formula : 0.625 * pixel = em 
+  =============================================    
+    10px - 1 em
+	
+	
+  COLORS HERLPER
+  ==============
+  #eee    - lighter gray
+  #ccc    - soft gray
+  #666    - medium gray
+  #333    - dark gray
+  #8B8B8B - light gray
+  #FAAF5E - Orange
+  #6396E7 - Blue
+  #1C69E4 - Blue
+  #2F72F9 - Blue
+  #b00b00 - Red
+  #de1e7e - Purple
+  #e1e100 - yellow
+  #BADA55 - light green
+  #F0FEAF - light yellow
+  #ac1d1c - blur red
+  #facade - light pink 
+	
+	
+  DIRECTORY
+  ==============  
+	- HEADER
+      -NAV
+    - MAIN
+    - SIDEBAR
+*/
+
+body {
+	
+  background: #222 url('images/bg.png') repeat;
+	
+  /* centers in IE */
+  line-height: 1.5;
+  font-family: "Lucida Grande","Lucida Sans Unicode",Arial,Verdana,sans-serif; }
+
+
+/* IE Resizing hack */
+html>body { font-size: 12px }
+
+#container { margin: 60px auto; width: 994px }
+
+.oldCoder { position: absolute; z-index: 0; top: 0; right: 0 }
+
+.supportTag { position: absolute; z-index: 0; top: 0; left: 0 }
+
+hr {
+  margin: 20px auto;
+  width: 100%;
+  border: 1px dotted #222;
+  display: inline-block }
+
+h1,h2,h3,h4,h5,h6 {
+  color: #fff;
+  margin-bottom: 10px }
+
+h1 { font-size: 2em }
+h2 { font-size: 1.8em }
+h3 { font-size: 1.6em }
+h4 { font-size: 1.4em }
+h5 { font-size: 1.2em }
+h6 { font-size: 1em }
+
+p { margin:10px 0;}
+
+a , a:link{ color: #ff3399}
+a:hover { color: #ff6699}
+a:visited { color: #cc3366 }
+
+
+a.btn {
+  background: url(images/bg-btn-right.png) right center no-repeat;
+  padding: 9px 6px 7px 0 }
+  
+a.btn span {
+  background: url(images/bg-btn-left.png) left center no-repeat;
+  padding: 9px 20px 7px 26px;
+  color: #660033;
+  font-weight: bold }
+
+.ie6 a.btn { padding: 8px 6px 7px 0 }
+
+a.btn:hover span { color: #ff99cc }
+
+.js-link { cursor: pointer; }
+
+/*  HEADER
+================*/
+header.main-header { 
+	position: relative;
+	margin: auto 0;	
+	width: 980px }
+
+	 .logo { 
+	  display: block; float: left;
+	  margin-bottom: 50px; 
+	  width: 338px; height: 58px;
+	  background: transparent url("images/sprite.png") no-repeat scroll left -380px }
+	  
+	  
+	  /*  NAV
+	  ================*/
+	 header.main-header nav { 
+	   clear: both;
+	   margin-left: 20px; 
+	   height: 30px; line-height: 30px;
+	   font-size: 12.5px; text-transform: capitalize; text-shadow: 1px 1px 1px #333; 
+	   letter-spacing:1.5px }
+	   
+	 .ie8 header.main-header nav {margin-left:30px }
+	 
+	 header.main-header nav li { margin-right: 5px }
+	   
+	 header.main-header nav a{
+	 	 display: block; float: left;
+		 padding-right: 10px; 
+	 	 background: transparent url('images/corner-sprite.png') no-repeat right -15px; color: #fff; 
+	 	 text-align: center  }
+	 	 
+	 header.main-header nav span{ 
+	   display: block;
+	   padding: 0 0 0 10px;
+	   background: transparent url("images/sprite.png") no-repeat left -15px;
+	   width: 111px }
+	   
+    header.main-header nav a:hover, header.main-header nav a.active {
+      margin-top: -15px;
+      height: 45px;
+      background-position: right -45px }
+	  			
+    header.main-header nav a:hover span,header.main-header nav a.active span {
+      height: 45px; line-height: 45px;
+      background-position: 0 -45px;
+      cursor: pointer }
+	  
+	  .ie6 header.main-header nav a:hover ,.ie6 header.main-header nav a.active{
+	    height: 30px; margin-top: 0 }
+	    
+	  .ie6 header.main-header nav a:hover span, .ie6 header.main-header nav a.active span {
+	   height: 30px; line-height: 30px }
+	   
+/*  MAIN
+================*/
+.ie figure#main-top , .ie figure#main-bottom{ 
+	width: 994px;
+	padding: 1px 5px 1px 4px;
+	background: transparent url("images/sprite.png") no-repeat }	
+	
+.ie8 figure#main-top , .ie8 figure#main-bottom {
+	padding: 10px 5px }
+
+.ie figure#main-top{
+	margin-top: -11px;
+	background-position: left -460px }
+
+.ie figure#main-bottom{ 	
+	background-position: left -485px }
+	
+#main-middle {
+  width: 980px;
+  background-color: rgba(0,0,0,0.92);  
+  -webkit-box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  -moz-box-shadow:    0 0 15px rgba(255, 255, 255, 0.8);
+  box-shadow:         0 0 15px rgba(255, 255, 255, 0.8);
+  /* !
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000)";*/ }
+  
+  .ie #main-middle{	
+	width: 994px;
+	padding: 0 4px;
+	background: transparent url('images/main-rep.png') repeat-y top center !important } 
+
+
+  #main-box{ width:758px; min-height:300px; height:auto !important; height:300px; border-right: 1px solid #222222;  float:left; }
+  	
+  #main-box-wrapper{ margin: 60px 20px; }
+  
+  #side-box{ width:220px; min-height:300px; height:auto !important; height:300px; float:left }
+  
+  #sidebar-section{ margin-left: 5px; }
+  
+  .ie #main-box{ margin-left:7px; display:inline;  /* ? Double margin,Staircase Effect */ }	
+  
+  .ie #side-box{margin-right:7px; display:inline;  /* ? Double margin,Staircase Effect */  }
+  
+  #side-box .social-links {
+    width: 220px; height: 80px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #222;
+    background: transparent url("images/bg-social.png") no-repeat top right }
+	
+	.ie6 #side-box .social-links { background-position: top left }
+	
+    .social-links a {
+	  width: 65px;
+	  float: left;
+	  text-align: center;	  
+	  margin: 10px 4px;
+	  background: transparent url("images/icon-sprite.png") no-repeat 0 -50px }	
+	  
+	.social-links a.side-facebook {
+	  background-position: -65px -50px }
+	  
+	.social-links a.side-rss {
+	  text-transform: capitalize; 
+	  background-position: -130px -50px }
+	  
+	.social-links a span { color: #fff; display: block; padding-top: 40px }
+	
+	.social-links a:hover span { color: #999 }
+  
+  #side-box .ads a {
+	float: left;
+	font-family: verdana,sans-serif;
+	font-weight: normal;
+	margin: 0 0 10px 10px;
+	display: inline;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	text-align: center;
+	text-decoration: none !important;
+	text-shadow: 0 1px 0 #FFFFFF;
+  }
+  
+
+
+#breadcrumb {
+  color: #888;
+  margin-bottom: 20px;
+  font-size: 1.2em }

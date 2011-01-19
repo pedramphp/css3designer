@@ -1,0 +1,183 @@
+              <nav class='button-accordion'>
+              
+              	<!-- Box Settings -->
+                <header class='button-accordion-header' >
+                  <a href='javascript:void(0)'><span>box settings</span></a>
+                </header>
+                <section class='button-accordion-content'>
+                  <label>padding horizontal</label>
+                  <section class='slider paddingHorizontal'></section>
+                  
+                  <label>padding vertical</label>
+                  <section class='slider paddingVertical'></section>
+                                    
+                  <label>box transform</label>
+                  <section class='slider boxTransform'></section>
+
+                  <fieldset>
+                    <legend>box shadow</legend>
+
+                    <label>shadow color</label>
+					<!--{assign var = 'colorpicker' value='boxShadowSc'}-->
+					<!--{include file = $includeTemplate|cat:"tools/buttonMaker/colorpicker.tpl.html"}-->                    
+                    <label>horizonal length</label>
+                    <section class='slider boxShadowHl'></section>
+                    
+                    <label>vertical length</label>
+                    <section class='slider boxShadowVl'></section>
+                    
+                    <label>blur radius</label>
+                    <section class='slider boxShadowBr'></section>
+                    
+                  </fieldset>
+                </section><!-- /button-accordion-content -->
+                <!-- /Box Settings -->
+                
+                
+                <!-- Background Settings -->
+                <header class='button-accordion-header'>
+                  <a href='javascript:void(0)'><span>background settings</span></a>
+                </header>
+                <section class='button-accordion-content relative'>
+                  <label>background color</label>
+					<!--{assign var = 'colorpicker' value='backgroundColor'}-->
+					<!--{include file = $includeTemplate|cat:"tools/buttonMaker/colorpicker.tpl.html"}-->
+				
+				<section  class='relative clearBoth'>
+                  <fieldset>
+                    <legend> linear gredient 
+                      <span class='button-checkbox'>
+						<!--{include file = $includeTemplate|cat:"tools/buttonMaker/onoff.tpl.html"}-->    				  
+					  </span>
+    				</legend>
+                    
+                    <label>top color</label>
+					<!--{assign var = 'colorpicker' value='linearGredientTC'}-->
+					<!--{include file = $includeTemplate|cat:"tools/buttonMaker/colorpicker.tpl.html"}-->
+                    <label>bottom color</label>
+					<!--{assign var = 'colorpicker' value='linearGredientBC'}-->
+					<!--{include file = $includeTemplate|cat:"tools/buttonMaker/colorpicker.tpl.html"}-->
+                  </fieldset>
+                  </section>
+                </section><!-- /button-accordion-content -->
+                <!-- / Background Settings -->
+                
+                
+                <!-- Border Settings -->
+                <header class='button-accordion-header'>
+                  <a href='javascript:void(0)'><span>border settings</span></a>
+                </header>
+                <section class='button-accordion-content clearfix'>
+                  <label>border color</label>
+					<!--{assign var = 'colorpicker' value='borderColor'}-->
+					<!--{include file = $includeTemplate|cat:"tools/buttonMaker/colorpicker.tpl.html"}-->									
+                  <label>border radius</label>
+                  <section class='borderRadius slider'></section>
+                  
+                  <label>border style:</label>
+                  <select class='borderStyle'>
+                    <option value = 'none'>none</option>
+                    <option value = 'dotted'>dotted</option>
+                    <option value = 'dashed'>dashed</option>
+                    <option value = 'solid'>solid</option>
+                    <option value = 'double'>double</option>
+                    <option value = 'groove'>groove</option>
+                    <option value = 'ridge'>ridge</option>
+                    <option value = 'inset'>inset</option>
+                    <option value = 'outset'>outset</option>
+                  </select>
+                  
+                  <label>border width:</label>
+                  <section class = 'borderWidth slider' ></section>
+                </section><!-- /button-accordion-content -->
+                <!-- /Border Settings -->
+                
+                
+                <!-- Text Settings -->
+                <header class='button-accordion-header'>
+                  <a href='javascript:void(0)'><span>text settings</span></a>
+                </header>
+                <section class='button-accordion-content'>
+                  <fieldset>
+				    <legend> main settings </legend>
+                    <label>text color</label>
+					<!--{assign var = 'colorpicker' value='textColor'}-->
+					<!--{include file = $includeTemplate|cat:"tools/buttonMaker/colorpicker.tpl.html"}-->	
+							
+                    <label>text</label>
+                    <input type='text' class='text' value='' />
+                    
+                    <label>letter spacing</label>
+                    <section class = 'letterSpacing slider'></section>
+                    
+                    <label> font family</label>
+                    <select class='fontFamily'>
+                      <option value = 'Arial'>Arial</option>
+                      <option value = 'ArialBlack'>Arial Black</option>
+                      <option value = 'Calibri'>Calibri</option>
+                      <option value = 'Century Gothic'>Century Gothic</option>
+                      <option value = 'Corbel'>Corbel</option>
+                      <option value = 'Helvetica'>Helvetica</option>
+                      <option value = 'Impact'>Impact</option>
+                      <option value = 'MS Sans Serif'>MS Sans Serif</option>
+                      <option value = 'Trebuchet MS'>Trebuchet MS</option>
+                      <option value = 'Verdana'>Verdana</option>
+                      <option value = 'Consolas'>Consolas</option>
+                      <option value = 'Courier New'>Courier New</option>
+                      <option value = 'Courier'>Courier</option>
+                      <option value = 'Lucida Grande'>Lucida Grande</option>
+                    </select>
+                    <label>font size</label>
+                    <section class = 'fontSize slider'></section>
+                    
+                    <label> font style</label>
+                    <select class='fontStyle'>
+                      <option value = 'normal'>normal</option>
+                      <option value = 'italic'>italic</option>
+                      <option value = 'oblique'>oblique</option>
+                    </select>
+                    
+                    <label> font weight</label>
+                    <select class='fontWeight'>
+                      <option value = 'normal'>normal</option>
+                      <option value = 'bold'>bold</option>
+                    </select>
+                    
+                    <label> text decoration</label>
+                    <select class='textDecoration'>
+                      <option value = 'none'>none</option>
+                      <option value = 'overline'>overline</option>
+                      <option value = 'line-through'>line-through</option>
+                      <option value = 'over-through'>over-through</option>
+                      <option value = 'blink'>blink</option>
+                    </select>
+                    
+                    <label>text transform</label>
+                    <select class='textTransform'>
+                      <option value = 'uppercase'>uppercase</option>
+                      <option value = 'capitalize'>capitalize</option>
+                      <option value = 'lowercase'>lowercase</option>
+                    </select>
+                  </fieldset>
+                  
+                  <fieldset>
+                    <legend> text shadow </legend>
+                    <label>shadow color</label>
+					<!--{assign var = 'colorpicker' value='textShadowSc'}-->
+					<!--{include file = $includeTemplate|cat:"tools/buttonMaker/colorpicker.tpl.html"}-->
+                    
+                    <label>horizonal length</label>
+                    <section class='textShadowHl slider'></section>
+                    
+                    <label>vertical length</label>
+                    <section class='textShadowVl slider'></section>
+                    
+                    <label>blur radius</label>
+                    <section class='textShadowBr slider'></section>
+                  </fieldset>
+                </section><!-- button-accordion-content -->
+              </nav><!--/ #button-accordion -->
+              <!-- /Text Settings -->
+              
+              
+              

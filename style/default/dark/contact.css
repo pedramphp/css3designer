@@ -1,0 +1,62 @@
+#location-map {
+  background-color: #111;
+  border: 1px solid #1A1A1A;
+  padding: 10px;
+  float: left !important }
+
+  #contact-loading { 
+    display: none;
+    margin: 150px 0px 0px 160px; 
+    width: 350px; height: 100px; line-height: 100px; 
+    background: #0A0A0; text-align: center  }	
+    
+.location-addr {
+  float: left;
+  width: 320px; height: 250px;
+  margin-left: 15px }
+
+.ie6 .location-addr,.ie7 .location-addr { height: 230px;}
+
+.location-addr span {
+  position: absolute; bottom: 0;
+  line-height: 18px }
+  
+.location-addr span abbr {color: #999; font-weight: bold}
+
+#location-map .map { float: left; border: 1px solid #101010 }
+
+#location-map .map img {
+  background-color: #111;
+  border: 1px solid #222;
+  padding: 10px;
+  display: block }
+
+#contactForm {
+  font-size: 13px;
+  border-top: 1px dotted #222;
+  margin-top: 20px; padding-top: 20px;
+  width: 100% }
+
+#contactForm td { line-height: 30px; padding: 5px }
+
+#contactForm input.txt, #contactForm textarea {
+  width: 450px; height: 20px;
+  margin: 0 2px 0 0; padding: 6px;
+  font-size: 15px;
+  float: left;
+  background: #111 url("images/contact/bg-input.png") repeat-x top left; color: #555;
+  border: 1px solid #1a1a1a }
+  
+.ie6 #contactForm input.txt, .ie6 #contactForm textarea {
+  background: #0c0c0c url("images/contact/bg-input.png") repeat-x top left }
+
+#contactForm input.txt:focus, #contactForm textarea:focus {
+  background: #333 url("images/contact/bg-input-on.png") repeat-x top left; color: #fff }
+#contactForm textarea {
+  margin: 0 0 10px;
+  width:451px !important; height:140px !important }
+
+.contact-success{ color: green; text-transform: capitalize; }
+
+.contact-fail{ color: red; text-transform: capitalize; }
+

@@ -1,0 +1,52 @@
+       <figure id='button-maker-loading' class='roundedCorner boxShadowWhiteFive'>
+      	<img src='<!--{$imagePath}-->tools/buttonMaker/loadingC.gif' alt='loading' />
+      	<img src='<!--{$imagePath}-->tools/buttonMaker/loading.gif' alt='loading' />
+      </figure>
+      <div id='button-maker' class='clearfix hide'>
+        <aside id='button-preview' data-top='307' >
+          <div class='roundedCorner'> 
+	          <a href='javascript:void(0)' id='linkPreview' class='showInline'> Button </a> 
+	          <a href='javascript:void(0)' id='hoverPreview' class='hide'> Button </a> 
+	          <a href='javascript:void(0)' id='activePreview' class='hide'> Button </a>
+	          <a href='javascript:void(0)' id='visitedPreview' class='hide'> Button </a>
+          </div>
+          <figure onClick="_gaq.push(['_trackEvent', 'Button Maker', 'Page Link', 'Get Css Code']);" id='button-get-code'> get css code</figure>
+<!--{include file = $includeTemplate|cat:"tools/buttonMaker/donation.tpl.html"}-->
+        </aside>
+        <section id='button-controller'>
+          <nav id='button-tabmenu'>
+            <ul class='horizontal'>
+	          <li><a onClick="_gaq.push(['_trackEvent', 'Button Maker', 'Accordian Title', 'link']);" href='#tab-link'><span>:link</span></a></li>
+	          <li><a onClick="_gaq.push(['_trackEvent', 'Button Maker', 'Accordian Title', 'hover']);" href='#tab-hover'><span>:hover</span></a></li>
+	          <li><a onClick="_gaq.push(['_trackEvent', 'Button Maker', 'Accordian Title', 'active']);" href='#tab-active'><span>:active</span></a></li>
+	          <li><a onClick="_gaq.push(['_trackEvent', 'Button Maker', 'Accordian Title', 'visited']);" href='#tab-visited'><span>:visited</span></a></li>
+	        </ul>
+	      </nav>
+	      <section id='tab-link' class='tab-content'>
+<!--{include file = $includeTemplate|cat:"tools/buttonMaker/accordion.tpl.html"}-->
+	      </section> <!--/ #tab-link -->
+	      
+	      <section id='tab-hover' class='tab-content'> 
+<!--{include file = $includeTemplate|cat:"tools/buttonMaker/accordion.tpl.html"}-->
+	      </section><!--/ #tab-hover --> 
+	      
+	      <section id='tab-active' class='tab-content'> 
+<!--{include file = $includeTemplate|cat:"tools/buttonMaker/accordion.tpl.html"}-->
+	      </section><!--/ #tab-active -->
+	      
+	      <section id='tab-visited' class='tab-content'> 
+<!--{include file = $includeTemplate|cat:"tools/buttonMaker/accordion.tpl.html"}-->
+	      </section><!--/ #tab-visited --> 
+	        
+	    </section><!--/ #button-controller -->
+      <aside id='button-code-box' class='roundedCorner'>
+        <div class='title roundedCornerTop' >
+          source code          
+          <a class='close' href='javascript:void(0)'>[close]</a>
+          <a onClick="_gaq.push(['_trackEvent', 'Button Maker', 'Page Link', 'Copy To Clipboard']);" class='clipboard'>[copy to clipboard]</a>
+        </div>  
+      	<code class="prettyprint lang-css"></code>
+      </aside>
+	</div><!--/ #button-maker -->
+	<!--{include file = $includeTemplate|cat:"fb/comment-box.tpl.html"}-->
+	
