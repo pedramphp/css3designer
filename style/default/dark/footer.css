@@ -221,4 +221,10 @@ a.gotop:hover { background-position: -50px -278px }
 
 #copyright .copyright-txt { float: left }
 
-#copyright .footer-logo { float: right }
+#copyright .footer-logo { 
+	float: right;
+	height: 55px;
+    margin-top: -15px; }
+    
+ .footer-logo img{ vertical-align: middle;} 
+ .footer-logo a {  height:50px; line-height:50px;}  
