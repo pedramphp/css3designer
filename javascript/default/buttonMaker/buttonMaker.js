@@ -38,6 +38,7 @@ var ButtonMaker = {
 			codeGenerator:function(){
 				$('#button-code-box').center();
 				$('#button-get-code').bind('click',this.showCodeHandler );	
+				$('#button-share').bind('click',this.buttonShare );	
 				$('#button-code-box a.close').bind('click',this.hideCodeHandler );
 			},
 			reset: function(){
@@ -226,12 +227,66 @@ var ButtonMaker = {
 				
 			},
 			
+			hideButtonMaker: function( func ){
+				$('#button-maker').fadeOut(400).addClass('hide');
+				$('#button-maker-loading').fadeIn( func );
+			},
+			
+			buttonShare: function(event){
+	
+				pa.hideButtonMaker(function(){
+					
+					var shareButton = {
+							
+							ajax: function(){
+								$.ajax({
+							        url        : $_LITE_.Application.GetApplicationURL('tools'), 
+							        dataType   : 'json',
+							        type	   : 'post',
+							        data       : shareButton.getData(),
+							        error      : shareButton.error,
+							        success    : shareButton.success
+								});					
+							},
+							
+							getData: function(){
+								var data = { 
+										cssCode: $('#button-code-box .prettyprint').data('code'),
+										buttonResult: {}, 
+										shareIt: true 
+								},tab;
+								
+								settings.tabs.find('a').each(function(){
+									tab = $(this).attr('href').split('#tab-')[1];
+									data.buttonResult[ tab ] = pa.applyAll( tab  );
+								});					
+								return data;
+							},
+							
+							error: function( msg ){
+								pa.alertMsg( msg || "Unfortuantely we had some Issues with this request.",false );
+							},					
+							
+							success: function( json ){
+								if(json.SiteData.buttonMaker === true){
+									pa.alertMsg( "Congraduations, your button has been successfully shared.",true );
+								}else{
+									shareButton.error( json.SiteData.buttonMaker.errorMsg );
+								}
+								
+							}
+					};
+					shareButton.ajax();
+					
+				});
+			},	
+			
 			
 			showButtonMaker: function(){
 				
 				$('#button-maker-loading').fadeOut(function(){
-					$('#button-maker').removeClass('hide').hide().fadeIn(400,function(){  })
-				})
+					$('#button-maker').removeClass('hide').hide().fadeIn(400);
+				});
 			},
 			
 
@@ -282,6 +337,19 @@ var ButtonMaker = {
 					}
 				}
 				return $.param(styleObj);
+				
+			},
+			
+			alertMsg: function( msg, success ){
+				var colorClass  = (success === true)? "alertSuccess":"alertError",
+					alertDiv = $("<div class='alertBox "+colorClass+"'/>").html( msg ).hide();
+				
+					alertDiv.insertBefore($(".button-maker-apply-all"));
+					$('#button-maker-loading').fadeOut(function(){
+						alertDiv.show(400).delay(1000).hide(400,function(){ $(this).remove(); 
+						pa.showButtonMaker(); });					
+					});
+
 				
 			}
 			

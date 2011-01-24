@@ -41,6 +41,8 @@ require_once(LiteFrame::GetFileSystemPath()."includes/SiteSettings.class.php");
 
 require_once(LiteFrame::GetFileSystemPath()."includes/modules/debugging/Debug.class.php");
 
+//Adding our Database Connection
+require_once(LiteFrame::GetFileSystemPath()."includes/modules/database/DatabaseStatic.class.php");
 
 class SiteHelper {
 	

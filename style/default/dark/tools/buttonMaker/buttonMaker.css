@@ -20,7 +20,7 @@
     
   #button-preview div a{/* ! this should be changed */}  
  
-  #button-get-code {
+  #button-get-code,#button-share {
     margin: 15px 0 0 15px;
     height: 45px;  line-height: 45px; width: 215px;  
     background: url("images/icon-sprite.png") no-repeat scroll left top transparent;  color: #000;
@@ -230,4 +230,17 @@
 			
 			.sliderVal{ 
 				position: absolute; top: -15px; left: 0px; 
-				font-size: 10px; color: #fff } 				
+				font-size: 10px; color: #fff } 	
+				
+				
+/* HELPER FUNCTIONS 
+============================*/
+
+.alertBox { 
+	border:1px solid #333; 
+	padding:20px; 
+	background:#eee; width:60%; margin:60px 0 ; }
+	
+.alertSuccess { color: green; }
+.alertError { color: red; }
+	
