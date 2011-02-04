@@ -225,14 +225,14 @@ header.main-header {
 	  float: left;
 	  text-align: center;	  
 	  margin: 10px 4px;
-	  background: transparent url("images/icon-sprite.png") no-repeat 0 -50px }	
+	  background: transparent url("images/icon-sprite.png") no-repeat 0 -94px }	
 	  
 	.social-links a.side-facebook {
-	  background-position: -65px -50px }
+	  background-position: -65px -94px }
 	  
 	.social-links a.side-rss {
 	  text-transform: capitalize; 
-	  background-position: -130px -50px }
+	  background-position: -130px -94px }
 	  
 	.social-links a span { color: #fff; display: block; padding-top: 40px }
 	

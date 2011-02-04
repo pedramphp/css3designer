@@ -26,6 +26,8 @@
     background: url("images/icon-sprite.png") no-repeat scroll left top transparent;  color: #000;
     font-family: arial; font-size: 18px; text-transform: uppercase;
     cursor: pointer; }
+   
+  #button-share { background-position: left -45px; }
 
   #button-code-box { 
 	  z-index: 9999; overflow: hidden;
