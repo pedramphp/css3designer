@@ -21,7 +21,7 @@
 				$to      = 'admin@css3designer.com,pedramphp@gmail.com';
 				$subject = 'Css3Designer Contact Us Request';
 				$message = "Name: $name Email: $email Message: $notes ";
-				$header = 'From: css3designer<admin@example.com> ' . "\r\n";
+				$header = 'From: css3designer<'.$email.'> ' . "\r\n";
 				
 				$this->results = array('success' => mail( $to, $subject, $message, $header ));				
 			}
